@@ -1,5 +1,36 @@
-<<<<<<< HEAD
-# Welcome to your Expo app 👋
+# 🌱 PlantCare App
+
+A React Native mobile application that helps users detect plant diseases and receive care recommendations using AI-powered image recognition.
+
+## 📱 Features
+
+- 📷 Capture or upload plant leaf images for disease detection
+- 🤖 Deep learning model integration for accurate plant disease diagnosis
+- 📄 Detailed result screen with plant health insights and care instructions
+- 🔍 Search and browse common plant diseases
+- 💾 Option to save diagnosed plants for future reference
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React Native (JavaScript)
+- **Backend**: Flask (Python) [for ML model serving]
+- **Machine Learning**: CNN-based model trained for plant disease detection
+- **Others**: Git, GitHub, Expo CLI, Python, VS Code
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js & npm
+- Expo CLI
+- Python 3.x
+- Git
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/SjainThuli/PlantCare.git
+cd PlantCare
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
@@ -19,9 +50,6 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
 In the output, you'll find options to open the app in a
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
 - [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
@@ -33,23 +61,5 @@ When you're ready, run:
 ```bash
 npm run reset-project
 ```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-=======
 # PlantCare
 My Final Year Project
->>>>>>> 4ad311da8367b5abf32f74e046d6d8cf7738e913
