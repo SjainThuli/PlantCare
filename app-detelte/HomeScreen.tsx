@@ -1,28 +1,37 @@
-import { Image, StyleSheet, Text, TouchableOpacity, Dimensions, View } from 'react-native';
 import React from 'react';
+import { View, Text, StyleSheet, Image, TouchableOpacity, Dimensions } from 'react-native';
 import { router } from 'expo-router';
 
-export default function HomeScreen() {
+const HomeScreen = () => {
   return (
     <View style={styles.container}>
-    <Image
-      source={require('/Users/thulisjain/Desktop/PLANT_CARE_APP/PlantCareExpo/assets/images/early-blight.jpg')} // Make sure the image exists in assets folder
-      style={styles.logo}
-      resizeMode="contain"
-    />
-    <Text style={styles.title}>Potato Care</Text>
-    <Text style={styles.subtitle}>Detect potato leaf diseases & get care tips.</Text>
+      <Image
+        source={require('./assets/images/icon.png')} // ✅ Place this image in assets/images folder at project root
+        style={styles.logo}
+        resizeMode="contain"
+      />
+      <Text style={styles.title}>Potato Care</Text>
+      <Text style={styles.subtitle}>Detect potato leaf diseases & get care tips.</Text>
 
-    <TouchableOpacity style={styles.button} onPress={() => router.push('DashboardScreen', { screen: 'Explore' })}      >
-      <Text style={styles.buttonText}>Diagnose Now</Text>
-    </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => router.push('/DashboardScreen')} // ✅ Navigates to dashboard/index.tsx
+      >
+        <Text style={styles.buttonText}>Diagnose Now</Text>
+      </TouchableOpacity>
 
-    <TouchableOpacity style={styles.secondaryButton} onPress={() => router.push('Learn')}>
-      <Text style={styles.secondaryButtonText}>Learn More</Text>
-    </TouchableOpacity>
-  </View>
+      <TouchableOpacity
+        style={styles.secondaryButton}
+        onPress={() => router.push('/learn')} // ✅ Navigates to learn.tsx
+      >
+        <Text style={styles.secondaryButtonText}>Learn More</Text>
+      </TouchableOpacity>
+    </View>
   );
-}
+};
+
+export default HomeScreen;
+
 const { width } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
@@ -79,4 +88,3 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
 });
-

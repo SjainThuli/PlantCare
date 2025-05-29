@@ -7,6 +7,10 @@ import { useEffect } from 'react';
 import 'react-native-reanimated';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
+import CameraScreen from './CameraScreen';
+import ResultScreen from './ResultScreen';
+import { impactAsync } from 'expo-haptics';
+import TabLayout from './(tabs)';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -30,8 +34,11 @@ export default function RootLayout() {
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="(tabs)" options={{ headerShown: true }} />
         <Stack.Screen name="+not-found" />
+        <Stack.Screen name="DashboardScreen" />
+        <Stack.Screen name="CameraScreen"/>
+        <Stack.Screen name="ResultScreen" />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
